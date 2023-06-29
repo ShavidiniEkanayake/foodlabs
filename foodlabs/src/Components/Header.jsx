@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <div className="pt-8">
-      <div className="flex flex-row items-center px-20">
+      <div className="flex flex-row items-center px-28">
         <img src={BugerIcon} className="h-6 px-8" />
         <img src={LogoLightPng} className="h-6 mr-7" />
         <div className="flex-grow" />{" "}
