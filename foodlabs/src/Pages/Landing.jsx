@@ -9,6 +9,7 @@ import FasterDelivery from "../Assets/FasterDelivery.png";
 import FoodData from "../Data/FoodData";
 import OfferData from "../Data/OffersData";
 import Header from "../Components/Header";
+import Footer from "../Components/Footer"
 import OfferImage from "../Assets/OfferImage.svg";
 import SideArrow from "../Assets/SideArrow.svg";
 import "../Assets/Styles/Landing.css";
@@ -115,21 +116,21 @@ const ThirdElement = () => {
       <div className="flex flex-row items-start justify-between px-36 my-4">
         {FoodData.slice(0, 4).map((dish, index) => (
           <div
-            className="bg-[#ECECEC] rounded-xl p-3 relative mb-5 w-1/4 mx-2"
+            className="bg-[#ECECEC] rounded-xl p-2 relative mb-5 w-1/4 mx-2"
             key={index}
           >
-            <img src={Food} alt="Special Dish" className="rounded-lg mb-4" />
+            <img src={Food} alt="Special Dish" className="rounded-lg mb-2" />
             <div className="absolute top-1 right-0">
               <img
                 src={FavouritIcon}
                 alt="Favorite"
-                className="w-12 h-12 transition hover:-translate-y hover:scale-110 duration-200 ease-in-out"
+                className="w-11 h-11 transition hover:-translate-y hover:scale-110 duration-200 ease-in-out"
               />
             </div>
             <p className="text-black font-inter font-bold text-[1.1rem]">
               {dish.name}
             </p>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center mb-2">
               <div className="flex flex-col items-center">
                 <p className="text-black font-inter font-bold text-[1rem] mt-4">
                   {dish.price}
@@ -137,7 +138,7 @@ const ThirdElement = () => {
               </div>
             </div>
             <button
-              className="hover:bg-black hover:text-white absolute bottom-2 right-3 bg-[#C40000] font-inter font-semibold text-white rounded-full px-4 py-2 text-xs"
+              className="hover:bg-black hover:text-white absolute bottom-2 right-3 bg-[#C40000] font-inter font-semibold text-white rounded-full px-4 py-2 text-xs mb-1"
               onClick={() => {
                 // Add to cart logic here
               }}
@@ -232,8 +233,8 @@ const FourthElement = () => {
         <button
           className={`font-inter font-semibold rounded-full px-4 py-2 text-sm ${
             isAllClicked
-            ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
-            : "text-black border-[#C40000] border-2"
+              ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
+              : "text-black border-[#C40000] border-2"
           } mr-5`}
           onClick={handleAllClick}
         >
@@ -252,8 +253,8 @@ const FourthElement = () => {
         <button
           className={`font-inter font-semibold rounded-full px-4 py-2 text-sm ${
             isLunchClicked
-            ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
-            : "text-black border-[#C40000] border-2"
+              ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
+              : "text-black border-[#C40000] border-2"
           } mr-5`}
           onClick={handleLunchClick}
         >
@@ -262,8 +263,8 @@ const FourthElement = () => {
         <button
           className={`font-inter font-semibold rounded-full px-4 py-2 text-sm ${
             isDinnerClicked
-            ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
-            : "text-black border-[#C40000] border-2"
+              ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
+              : "text-black border-[#C40000] border-2"
           } mr-5`}
           onClick={handleDinnerClick}
         >
@@ -272,8 +273,8 @@ const FourthElement = () => {
         <button
           className={`font-inter font-semibold rounded-full px-4 py-2 text-sm ${
             isDessertsClicked
-            ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
-            : "text-black border-[#C40000] border-2"
+              ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
+              : "text-black border-[#C40000] border-2"
           } mr-5`}
           onClick={handleDessertsClick}
         >
@@ -282,8 +283,8 @@ const FourthElement = () => {
         <button
           className={`font-inter font-semibold rounded-full px-4 py-2 text-sm ${
             isBeveragesClicked
-            ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
-            : "text-black border-[#C40000] border-2"
+              ? "bg-[#C40000] text-white hover:bg-black hover:text-white"
+              : "text-black border-[#C40000] border-2"
           } mr-5`}
           onClick={handleBeveragesClick}
         >
@@ -293,34 +294,36 @@ const FourthElement = () => {
       <div className="flex flex-row items-start justify-between px-36 my-4">
         {FoodData.slice(0, 4).map((dish, index) => (
           <div
-            className="bg-[#ECECEC] rounded-xl p-3 relative mb-5 w-1/4 mx-2"
-            key={index}
-          >
-            <img src={Food} alt="Special Dish" className="rounded-lg mb-4" />
-            <div className="absolute top-1 right-0">
-              <img
-                src={FavouritIcon}
-                alt="Favorite"
-                className="w-12 h-12 transition hover:-translate-y hover:scale-110 duration-200 ease-in-out"
-              />
-            </div>
-            <p className="text-black font-inter font-bold text-[1.3rem]">
-              {dish.name}
-            </p>
-            <div className="flex flex-row items-center">
-              <div className="flex flex-col items-center">
-                <p className="text-black font-inter font-bold text-[1.3rem] mt-4">
-                  {dish.price}
-                </p>
-              </div>
-            </div>
-            <button
-              className="hover:bg-black hover:text-white absolute bottom-3 right-3 bg-[#C40000] font-inter font-semibold text-white rounded-full px-4 py-2 text-sm"
-              onClick={() => {}}
-            >
-              Add To Cart
-            </button>
+          className="bg-[#ECECEC] rounded-xl p-2 relative mb-5 w-1/4 mx-2"
+          key={index}
+        >
+          <img src={Food} alt="Special Dish" className="rounded-lg mb-2" />
+          <div className="absolute top-1 right-0">
+            <img
+              src={FavouritIcon}
+              alt="Favorite"
+              className="w-11 h-11 transition hover:-translate-y hover:scale-110 duration-200 ease-in-out"
+            />
           </div>
+          <p className="text-black font-inter font-bold text-[1.1rem]">
+            {dish.name}
+          </p>
+          <div className="flex flex-row items-center mb-2">
+            <div className="flex flex-col items-center">
+              <p className="text-black font-inter font-bold text-[1rem] mt-4">
+                {dish.price}
+              </p>
+            </div>
+          </div>
+          <button
+            className="hover:bg-black hover:text-white absolute bottom-2 right-3 bg-[#C40000] font-inter font-semibold text-white rounded-full px-4 py-2 text-xs mb-1"
+            onClick={() => {
+              // Add to cart logic here
+            }}
+          >
+            Add To Cart
+          </button>
+        </div>
         ))}
       </div>
       <p className="flex flex-row items-center justify-center mt-10 font-inter font-bold text-lg transition hover:-translate-y hover:scale-105 duration-200 ease-in-out">
@@ -380,6 +383,7 @@ function Landing() {
       <ThirdElement />
       <FourthElement />
       <FifthElement />
+      <Footer/>
     </div>
   );
 }
