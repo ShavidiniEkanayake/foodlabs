@@ -16,7 +16,7 @@ function Header() {
           <div className="mr-4">
             <button
               onClick={() => navigate("/auth")}
-              className="transition hover:-translate-y hover:red duration-200 ease-in-out bg-[#D9D9D9] text-black rounded-md h-10 w-fit px-8 py-1 font-inter font-semibold"
+              className="hover:bg-black hover:text-white bg-[#D9D9D9] text-black rounded-md h-10 w-fit px-8 py-1 font-inter font-semibold"
             >
               SignUp
             </button>
@@ -24,7 +24,7 @@ function Header() {
           <div className="mr-4">
             <button
               onClick={() => navigate("/auth")}
-              className="transition hover:-translate-y hover:red duration-200 ease-in-out bg-[#C40000] text-white rounded-md h-10 w-fit px-8 py-1 font-inter font-semibold"
+              className="hover:bg-black hover:text-white bg-[#C40000] text-white rounded-md h-10 w-fit px-8 py-1 font-inter font-semibold"
             >
               LogIn
             </button>
