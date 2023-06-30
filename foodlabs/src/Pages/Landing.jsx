@@ -15,6 +15,9 @@ import SideArrow from "../Assets/SideArrow.svg";
 import "../Assets/Styles/Landing.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
+import SwiperCore, { Autoplay } from "swiper";
+
+SwiperCore.use([Autoplay]);
 
 const FirstElement = () => {
   const navigate = useNavigate();
@@ -350,7 +353,7 @@ const FifthElement = () => {
         <Swiper spaceBetween={1} slidesPerView={3}>
           {OfferData.map((offer) => (
             <SwiperSlide key={offer.id}>
-              <div className="bg-[#ECECEC] rounded-xl shadow-xl p-3 relative mb-5 mx-2">
+              <div className="bg-[#f6f6f6] rounded-xl shadow-lg p-2 relative mb-5 mx-2">
                 <div className="flex flex-row">
                   <img
                     src={OfferImage}
@@ -358,11 +361,11 @@ const FifthElement = () => {
                     className="rounded-lg h-32"
                   />
                   <div className="flex flex-col ml-4 justify-center">
-                    <p className="text-black font-inter font-bold text-[1.5rem]">
+                    <p className="text-black font-inter font-bold text-[1.4rem]">
                       {offer.title}
                     </p>
                     <p>{offer.description}</p>
-                    <p className="text-[#C40000]">{offer.code}</p>
+                    <p className="text-[#C40000]">Use Code:{offer.discountCode}</p>
                   </div>
                 </div>
               </div>
